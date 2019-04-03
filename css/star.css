@@ -10,20 +10,11 @@
   transition: transform 200ms ease;
   width: 65px;
 }
-
-.stars.rated .fas {
+.stars:hover .fas, .stars.rated .fas {
   color: var(--gold);
 }
 
-.stars:hover .fas {
-  color: var(--gold);
-}
-
-.stars .fas:hover ~ .fas {
-  color: var(--light-gray);
-}
-
-.stars.rated .fas.active ~ .fas {
+.stars.rated:not(:hover) .fas.active ~ .fas, .stars .fas:hover ~ .fas {
   color: var(--light-gray);
 }
 
